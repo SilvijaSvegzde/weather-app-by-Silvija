@@ -1,0 +1,110 @@
+body {
+  font-family: "PT Sans", sans-serif;
+  background-image: url("https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #fffafa;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 100;
+  line-height: 28px;
+  margin: 0;
+}
+ul {
+  padding: 0;
+  margin-bottom: 10px;
+}
+li {
+  list-style-type: none;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 1.3;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+a:hover {
+  color: #ffe0e0;
+}
+
+.temperature {
+  position: relative;
+  top: 6px;
+
+  font-size: 46px;
+  font-weight: 100;
+  line-height: 64px;
+  margin: 0.5;
+}
+
+.units {
+  position: relative;
+  top: -16px;
+}
+
+.weather-icon {
+  position: relative;
+  bottom: 10px;
+  height: 64px;
+  margin-right: 10px;
+}
+
+.weatherApp {
+  border: 1px solid #3e4a62;
+  padding: 15px 15px 100px 15px;
+  margin: auto;
+  max-width: 600px;
+  border-radius: 5px;
+  backdrop-filter: blur(15px);
+  margin-top: 50px;
+}
+
+.btn {
+  border: 0;
+  line-height: 2.1;
+  padding: 0 15px;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  border-radius: 10px;
+  background-color: #db9186;
+  opacity: 0.8;
+  transition: all 0.25s ease-out;
+}
+
+.btn:hover {
+  color: white;
+  background-color: #db9186;
+  opacity: 3;
+}
+
+.btn:focus {
+  background-color: #db9186;
+  color: #fff;
+}
+
+.weekday {
+  font-size: 18px;
+}
+
+.icons {
+  line-height: 30px;
+  font-size: 24px;
+}
+.temperatures {
+  font-size: 16px;
+}
+
+.dropdown-menu {
+  background-color: #fffafa;
+}
+
+.dropdown-item:hover {
+  background-color: #fffafa;
+}

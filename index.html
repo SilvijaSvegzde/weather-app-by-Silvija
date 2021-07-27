@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Weather App</title>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1"/>
+    
+   <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="weatherApp">
+      
+
+
+      <form id="city-form">
+        <div class="row">
+          <div class="col-8">
+        <input type="search" placeholder="Type a city..." class="form-control" id="city-input" autofocus="on" autocomplete="off">
+      </div>
+      <div class="col-2">
+      <input type="submit" value="Search" class="form-control btn .btn">
+    </div>
+    <div class="col-2">
+      <input type="submit" value="Current" class="form-control btn .btn id="current-location">
+    </div>
+    </div>
+    </form>
+    <br>
+    
+      <h1 id="updated-city">Paris, <span id="update-country">France</span></h1>
+              <ul>
+              <li id="currentTime">Monday 5:43 PM</li>
+              <li id="desc">Rain</li>
+            </ul>
+      <div class="row">
+        <div class="col-6">
+          <div class="clearfix">
+              <span alt="Weather Icon" 
+              class="weather-icon float-left" id="weather-icon"></span>
+              <span class="temperature" id="temperature-value">10</span><span class="units"> <a href="" id="celsius">°C </a> | <a href="" id="farenheit">°F</a></span>
+            
+            </div>
+          </div>
+          
+          
+        <div class="col-6">
+          
+             
+              <ul>
+            <li>
+                Humidity: <span id="humidity">70</span>%
+              </li>
+              <li>
+                Wind: <span id="wind-speed">15</span> km/h
+              </li>
+            </ul>
+            </div>
+          </div>
+        
+      
+<br>
+
+      <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            5 Days Forecast
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">5 Days Forecast</a></li>
+            <li><a class="dropdown-item" href="#">2 Weeks Forecast</a></li>
+          </ul>
+        </div>
+
+      <br>
+      
+
+  
+      <div class="container">
+          <div class="row">
+            <div class="col weekday">
+              Tue
+            </div >
+            <div class="col weekday">
+              Wed
+            </div >
+            <div class="col weekday">
+                Thu
+              </div>
+              <div class="col weekday">
+                  Fri
+                </div >
+                <div class="col weekday">
+                    Sat
+                 </div>
+          </div>
+          <div class="row">
+            <div class="col icons">
+                ⛅
+            </div>
+            <div class="col icons">
+                ☀️
+            </div>
+            <div class="col icons">
+                ⛈️
+            </div>
+            <div class="col icons">
+                🌧️
+              </div>
+              <div class="col icons">
+                  ☁️ 
+                </div>
+                
+          </div>
+          <div class="row">
+              <div class="col temperatures">
+                  17° 8°
+              </div>
+              <div class="col temperatures">
+                  19° 10° 
+              </div>
+              <div class="col temperatures">
+                  17° 9°
+              </div>
+              <div class="col temperatures">
+                  18° 12°
+                </div>
+                <div class="col temperatures">
+                    16° 11°
+                  </div>
+                  
+            </div>
+        </div>
+
+      <script src="src/index.js">
+    </script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
