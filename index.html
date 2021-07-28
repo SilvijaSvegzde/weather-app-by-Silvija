@@ -17,47 +17,22 @@
     <div class="container">
       <div class="weatherApp">
       
+        <h1 id="currentTime"></h1>
+        <br>
+<h1 id="updated-city"><span id="update-country"></span></h1>
+<h5 id="desc"></h5>
 
-      <form id="city-form">
-        <div class="row">
-          <div class="col-5">
-        <input type="search" placeholder="Type a city..." class="form-control" id="city-input" autofocus="on" autocomplete="off">
-      </div>
-      
-    <div class="col-3">
-      <input type="submit" value="current" class="btn btn-outline-dark" id="current-location">
-    </div>
-    
-      </div>
-
-        </form>
-        
-      
-    
-  
-  
-    <br>
-    
-    <h3 id="currentTime"></h3>
-      <h1 id="updated-city"><span id="update-country"></span></h1>
-              
-              <h5 id="desc"></h5>
-          
-      <div class="row">
-        <div class="col-6">
+<div class="row">
           <div class="clearfix">
               <span alt="Weather Icon" 
               class="weather-icon float-left" id="weather-icon"></span>
               <span class="temperature" id="temperature-value"></span><span class="units"> <a href="" id="celsius">°C </a> | <a href="" id="farenheit">°F</a></span>
-            
             </div>
           </div>
           
-          
-        <div class="col-6">
-          
-             
+          <div class="row">
               <ul>
+                <li>H:<span></span>°C  L:<span id="lowest"></span>°C</li>
             <li>
                 Humidity: <span id="humidity"></span>%
               </li>
@@ -66,8 +41,16 @@
               </li>
             </ul>
             </div>
-          </div>
-           
+          
+<br>
+      <form id="city-form">
+        <div class="row">
+          <div class="col-7">
+        <input type="search" placeholder="Type a city..." class="form-control" id="city-input" autofocus="on" autocomplete="off">
+      </div>
+    </div>
+        </form>
+              
 <br>
 
       <div class="container">
@@ -81,6 +64,15 @@
             <div class="col weekday">
                 Thu
               </div>
+              <div class="col weekday">
+                  Fri
+                </div >
+                <div class="col weekday">
+                    Sat
+                 </div>
+                 <div class="col weekday">
+                    Sun
+                 </div>
               
           </div>
           
@@ -94,10 +86,28 @@
             <div class="col icons">
                 ⛈️
             </div>
+            <div class="col icons">
+                ⛅
+            </div>
+            <div class="col icons">
+                ☀️
+            </div>
+            <div class="col icons">
+                ⛈️
+            </div>
             
                 
           </div>
           <div class="row">
+              <div class="col temperatures">
+                  17° 8°
+              </div>
+              <div class="col temperatures">
+                  19° 10° 
+              </div>
+              <div class="col temperatures">
+                  17° 9°
+              </div>
               <div class="col temperatures">
                   17° 8°
               </div>
@@ -113,45 +123,7 @@
             <br>
               <br>
 
-            <div class="row">
-<div class="col weekday">
-                  Fri
-                </div >
-                <div class="col weekday">
-                    Sat
-                 </div>
-                 <div class="col weekday">
-                    Sun
-                 </div>
-
-          </div>
-          <div class="row">
-            <div class="col icons">
-                ⛅
-            </div>
-            <div class="col icons">
-                ☀️
-            </div>
-            <div class="col icons">
-                ⛈️
-            </div>
-            
-                
-          </div>
-
-          <div class="row">
-              <div class="col temperatures">
-                  17° 8°
-              </div>
-              <div class="col temperatures">
-                  19° 10° 
-              </div>
-              <div class="col temperatures">
-                  17° 9°
-              </div>
-             
-                  
-            </div>
+        </div>
         </div>
 
       <script src="src/index.js">

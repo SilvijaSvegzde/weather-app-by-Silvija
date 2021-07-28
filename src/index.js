@@ -35,6 +35,10 @@ function showCurrentWeather(response) {
   windSpeed.innerHTML = response.data.wind.speed;
   let country = document.querySelector("#update-country");
   country.innerHTML = response.data.sys.country;
+  let highest = document.querySelector("#highest");
+  highest.innerHTML = response.data.main.temp_max;
+  let lowest = document.querySelector("#lowest");
+  lowest.innerHTML = response.data.main.temp_min;
 }
 
 function retrievePosition(position) {
@@ -62,6 +66,10 @@ function showTemperature(response) {
   windSpeed.innerHTML = response.data.wind.speed;
   let country = document.querySelector("#update-country");
   country.innerHTML = response.data.sys.country;
+  let highest = document.querySelector("#highest");
+  highest.innerHTML = response.data.main.temp_max;
+  let lowest = document.querySelector("#lowest");
+  lowest.innerHTML = response.data.main.temp_min;
 }
 
 function showWeather(city) {

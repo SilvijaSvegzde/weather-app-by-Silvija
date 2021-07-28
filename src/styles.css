@@ -12,6 +12,12 @@ h1 {
   font-weight: 100;
   line-height: 28px;
   margin: 0;
+  text-align: center;
+}
+
+h5 {
+  text-align: center;
+  font-size: 15px;
 }
 ul {
   padding: 0;
@@ -19,7 +25,7 @@ ul {
 }
 li {
   list-style-type: none;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 100;
   line-height: 1.3;
 }
@@ -31,6 +37,10 @@ a {
 
 a:hover {
   color: #142d4c;
+}
+
+.row {
+  text-align: center;
 }
 
 .temperature {
@@ -84,13 +94,17 @@ a:hover {
 }
 
 .weekday {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .icons {
   line-height: 30px;
-  font-size: 24px;
+  font-size: 20px;
 }
 .temperatures {
-  font-size: 16px;
+  font-size: 13px;
+}
+
+#city-form {
+  margin-left: 30%;
 }
