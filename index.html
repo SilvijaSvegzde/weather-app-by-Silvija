@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/styles.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    
   </head>
 
   <body>
@@ -17,33 +18,37 @@
       <div class="weatherApp">
       
 
-
       <form id="city-form">
         <div class="row">
-          <div class="col-8">
+          <div class="col-5">
         <input type="search" placeholder="Type a city..." class="form-control" id="city-input" autofocus="on" autocomplete="off">
       </div>
-      <div class="col-2">
-      <input type="submit" value="Search" class="form-control btn .btn">
+      
+    <div class="col-3">
+      <input type="submit" value="current" class="btn btn-outline-dark" id="current-location">
     </div>
-    <div class="col-2">
-      <input type="submit" value="Current" class="form-control btn .btn id="current-location">
-    </div>
-    </div>
-    </form>
+    
+      </div>
+
+        </form>
+        
+      
+    
+  
+  
     <br>
     
-      <h1 id="updated-city">Paris, <span id="update-country">France</span></h1>
-              <ul>
-              <li id="currentTime">Monday 5:43 PM</li>
-              <li id="desc">Rain</li>
-            </ul>
+    <h3 id="currentTime"></h3>
+      <h1 id="updated-city"><span id="update-country"></span></h1>
+              
+              <h5 id="desc"></h5>
+          
       <div class="row">
         <div class="col-6">
           <div class="clearfix">
               <span alt="Weather Icon" 
               class="weather-icon float-left" id="weather-icon"></span>
-              <span class="temperature" id="temperature-value">10</span><span class="units"> <a href="" id="celsius">°C </a> | <a href="" id="farenheit">°F</a></span>
+              <span class="temperature" id="temperature-value"></span><span class="units"> <a href="" id="celsius">°C </a> | <a href="" id="farenheit">°F</a></span>
             
             </div>
           </div>
@@ -54,32 +59,17 @@
              
               <ul>
             <li>
-                Humidity: <span id="humidity">70</span>%
+                Humidity: <span id="humidity"></span>%
               </li>
               <li>
-                Wind: <span id="wind-speed">15</span> km/h
+                Wind: <span id="wind-speed"></span> km/h
               </li>
             </ul>
             </div>
           </div>
-        
-      
+           
 <br>
 
-      <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            5 Days Forecast
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" href="#">5 Days Forecast</a></li>
-            <li><a class="dropdown-item" href="#">2 Weeks Forecast</a></li>
-          </ul>
-        </div>
-
-      <br>
-      
-
-  
       <div class="container">
           <div class="row">
             <div class="col weekday">
@@ -91,13 +81,9 @@
             <div class="col weekday">
                 Thu
               </div>
-              <div class="col weekday">
-                  Fri
-                </div >
-                <div class="col weekday">
-                    Sat
-                 </div>
+              
           </div>
+          
           <div class="row">
             <div class="col icons">
                 ⛅
@@ -108,12 +94,7 @@
             <div class="col icons">
                 ⛈️
             </div>
-            <div class="col icons">
-                🌧️
-              </div>
-              <div class="col icons">
-                  ☁️ 
-                </div>
+            
                 
           </div>
           <div class="row">
@@ -126,12 +107,49 @@
               <div class="col temperatures">
                   17° 9°
               </div>
+              
+                  
+            </div>
+            <br>
+              <br>
+
+            <div class="row">
+<div class="col weekday">
+                  Fri
+                </div >
+                <div class="col weekday">
+                    Sat
+                 </div>
+                 <div class="col weekday">
+                    Sun
+                 </div>
+
+          </div>
+          <div class="row">
+            <div class="col icons">
+                ⛅
+            </div>
+            <div class="col icons">
+                ☀️
+            </div>
+            <div class="col icons">
+                ⛈️
+            </div>
+            
+                
+          </div>
+
+          <div class="row">
               <div class="col temperatures">
-                  18° 12°
-                </div>
-                <div class="col temperatures">
-                    16° 11°
-                  </div>
+                  17° 8°
+              </div>
+              <div class="col temperatures">
+                  19° 10° 
+              </div>
+              <div class="col temperatures">
+                  17° 9°
+              </div>
+             
                   
             </div>
         </div>

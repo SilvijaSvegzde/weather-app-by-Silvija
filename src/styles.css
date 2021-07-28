@@ -1,10 +1,10 @@
 body {
   font-family: "PT Sans", sans-serif;
-  background-image: url("https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-size: cover;
-  color: #fffafa;
+  background-attachment: fixed;
+  color: #142d4c;
 }
 
 h1 {
@@ -26,11 +26,11 @@ li {
 
 a {
   text-decoration: none;
-  color: whitesmoke;
+  color: #142d4c;
 }
 
 a:hover {
-  color: #ffe0e0;
+  color: #142d4c;
 }
 
 .temperature {
@@ -56,7 +56,7 @@ a:hover {
 }
 
 .weatherApp {
-  border: 1px solid #3e4a62;
+  border: 1px solid #142d4c;
   padding: 15px 15px 100px 15px;
   margin: auto;
   max-width: 600px;
@@ -66,27 +66,21 @@ a:hover {
 }
 
 .btn {
-  border: 0;
+  border: 1;
   line-height: 2.1;
   padding: 0 15px;
   font-size: 1rem;
   text-align: center;
-  color: #fff;
+  color: #142d4c;
   border-radius: 10px;
-  background-color: #db9186;
+
   opacity: 0.8;
   transition: all 0.25s ease-out;
 }
 
 .btn:hover {
+  background-color: #142d4c;
   color: white;
-  background-color: #db9186;
-  opacity: 3;
-}
-
-.btn:focus {
-  background-color: #db9186;
-  color: #fff;
 }
 
 .weekday {
@@ -99,12 +93,4 @@ a:hover {
 }
 .temperatures {
   font-size: 16px;
-}
-
-.dropdown-menu {
-  background-color: #fffafa;
-}
-
-.dropdown-item:hover {
-  background-color: #fffafa;
 }
