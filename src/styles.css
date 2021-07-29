@@ -39,6 +39,16 @@ a:hover {
   color: #142d4c;
 }
 
+.weatherApp {
+  border: 1px solid #142d4c;
+  padding: 15px 15px 100px 15px;
+  margin: auto;
+  max-width: 600px;
+  border-radius: 5px;
+  backdrop-filter: blur(15px);
+  margin-top: 50px;
+}
+
 .row {
   text-align: center;
 }
@@ -46,7 +56,6 @@ a:hover {
 .temperature {
   position: relative;
   top: 6px;
-
   font-size: 46px;
   font-weight: 100;
   line-height: 64px;
@@ -56,6 +65,7 @@ a:hover {
 .units {
   position: relative;
   top: -16px;
+  text-decoration: none;
 }
 
 .weather-icon {
@@ -63,16 +73,6 @@ a:hover {
   bottom: 10px;
   height: 64px;
   margin-right: 10px;
-}
-
-.weatherApp {
-  border: 1px solid #142d4c;
-  padding: 15px 15px 100px 15px;
-  margin: auto;
-  max-width: 600px;
-  border-radius: 5px;
-  backdrop-filter: blur(15px);
-  margin-top: 50px;
 }
 
 .btn {
@@ -107,4 +107,12 @@ a:hover {
 
 #city-form {
   margin-left: 30%;
+}
+
+#source {
+  text-align: center;
+}
+
+a.underlined {
+  text-decoration: underline;
 }
