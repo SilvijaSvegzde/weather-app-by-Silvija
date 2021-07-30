@@ -13,7 +13,6 @@ h1 {
   line-height: 28px;
   margin: 0;
   margin-bottom: 20px;
-  text-align: center;
 }
 
 ul {
@@ -39,6 +38,21 @@ a {
 
 a:hover {
   color: #142d4c;
+}
+
+#city-input {
+  padding-left: 10px;
+  font-size: 14px;
+  color: #142d4c;
+  line-height: 1.3;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-position: 95% 80%;
+  width: 100%;
+  padding: 10px;
+  cursor: auto;
 }
 
 .weather-app-wrapper {
@@ -92,7 +106,7 @@ a {
 
 .weather-icon {
   position: relative;
-  bottom: 10px;
+  bottom: 15px;
   height: 64px;
   margin-right: 10px;
 }
@@ -125,8 +139,4 @@ a {
 }
 .temperatures {
   font-size: 13px;
-}
-
-#city-form {
-  margin-left: 30%;
 }
