@@ -1,75 +1,53 @@
-let now = new Date();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let currentDay = days[now.getDay()];
-let hours = now.getHours();
-let minutes = now.getMinutes();
-if (hours < 10) {
-  hours = "0" + hours;
-}
-if (minutes < 10) {
-  minutes = "0" + minutes;
-}
+function formatDate(timestamp) {
+  let now = new Date(timestamp);
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let currentDay = days[now.getDay()];
 
-let current = document.querySelector("#currentTime");
-current.innerHTML = `${currentDay} ${hours}:${minutes}`;
-
-function showCurrentWeather(response) {
-  let temp = document.querySelector("#temperature-value");
-  let temperature = Math.round(response.data.main.temp);
-  temp.innerHTML = `${temperature}`;
-  let cityName = document.querySelector("#updated-city");
-  cityName.innerHTML = response.data.name;
-  let description = document.querySelector("#desc");
-  description.innerHTML = response.data.weather[0].main;
-  let humidity = document.querySelector("#humidity");
-  humidity.innerHTML = response.data.main.humidity;
-  let windSpeed = document.querySelector("#wind-speed");
-  windSpeed.innerHTML = response.data.wind.speed;
-  let country = document.querySelector("#update-country");
-  country.innerHTML = response.data.sys.country;
-  let highest = document.querySelector("#highest");
-  highest.innerHTML = response.data.main.temp_max;
-  let lowest = document.querySelector("#lowest");
-  lowest.innerHTML = response.data.main.temp_min;
+  if (hours < 10) {
+    hours = "0" + hours;
+  }
+  if (minutes < 10) {
+    minutes = "0" + minutes;
+  }
+  return `${currentDay} ${hours}:${minutes}`;
 }
-
-function retrievePosition(position) {
-  let apiKey = "46fd4cb2825699c13e293644a9027f76";
-  let units = "metric";
-  let lat = position.coords.latitude;
-  let lon = position.coords.longitude;
-  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${units}&appid=${apiKey}`;
-  axios.get(url).then(showCurrentWeather);
-}
-
-navigator.geolocation.getCurrentPosition(retrievePosition);
 
 function showTemperature(response) {
-  let temperature = Math.round(response.data.main.temp);
   let temp = document.querySelector("#temperature-value");
-  temp.innerHTML = `${temperature}`;
   let cityName = document.querySelector("#updated-city");
-  cityName.innerHTML = response.data.name;
   let description = document.querySelector("#desc");
-  description.innerHTML = response.data.weather[0].main;
   let humidity = document.querySelector("#humidity");
-  humidity.innerHTML = response.data.main.humidity;
   let windSpeed = document.querySelector("#wind-speed");
-  windSpeed.innerHTML = response.data.wind.speed;
-  let country = document.querySelector("#update-country");
-  country.innerHTML = response.data.sys.country;
   let highest = document.querySelector("#highest");
-  highest.innerHTML = response.data.main.temp_max;
   let lowest = document.querySelector("#lowest");
-  lowest.innerHTML = response.data.main.temp_min;
+  let country = document.querySelector("#updated-country");
+  let dateElement = document.querySelector("#currentTime");
+  let iconElement = document.querySelector("#icon");
+
+  temp.innerHTML = Math.round(response.data.main.temp);
+  cityName.innerHTML = response.data.name;
+  description.innerHTML = response.data.weather[0].description;
+  humidity.innerHTML = response.data.main.humidity;
+  windSpeed.innerHTML = Math.round(response.data.wind.speed);
+  highest.innerHTML = Math.round(response.data.main.temp_max);
+  lowest.innerHTML = Math.round(response.data.main.temp_min);
+  country.innerHTML = response.data.sys.country;
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function showWeather(city) {
@@ -91,3 +69,28 @@ function search(event) {
 
 let form = document.querySelector("#city-form");
 form.addEventListener("submit", search);
+
+function retrievePosition(position) {
+  let apiKey = "46fd4cb2825699c13e293644a9027f76";
+  let units = "metric";
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${units}&appid=${apiKey}`;
+  axios.get(url).then(showTemperature);
+}
+
+navigator.geolocation.getCurrentPosition(retrievePosition);
+
+// Background color depending on time of the day
+
+function changeBackground() {
+  let hour = time("#currentTime");
+  if (10 > hour < 18) {
+    document.style.body.background =
+      "linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)";
+  } else {
+    document.style.body.background = "black";
+  }
+}
+
+/// Background color function end
