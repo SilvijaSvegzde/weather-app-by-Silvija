@@ -15,14 +15,15 @@ h1 {
   margin-bottom: 20px;
 }
 
-ul {
+ul.description {
   padding: 0;
-  margin-top: 33px;
+  margin-top: 25px;
   margin-left: 10px;
+  text-align: left;
 }
-li {
+li.description {
   list-style-type: none;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 100;
   line-height: 1.3;
 }
@@ -67,7 +68,7 @@ a:hover {
 }
 
 .row {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .temperature {
@@ -80,8 +81,9 @@ a:hover {
 }
 
 .weather-temperature img {
+  position: relative;
   margin-right: 5px;
-  margin-top: 5px;
+  margin-top: 20px;
   height: 64px;
   width: 64px;
 }
@@ -147,4 +149,28 @@ a {
 
 .weather-temperature .active:hover {
   text-decoration: none;
+}
+
+ul.forecast {
+  text-align: left;
+  line-height: 1.3;
+}
+
+li {
+  list-style-type: none;
+  font-size: 14px;
+}
+
+.scrolling-wrapper {
+  overflow-x: auto;
+}
+
+.card-block {
+  height: 100px;
+  width: 100px;
+  margin: 5px;
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  transition: all 0.2s ease-in-out;
 }
