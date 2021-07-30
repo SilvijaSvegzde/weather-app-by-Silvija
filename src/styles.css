@@ -17,7 +17,7 @@ h1 {
 
 ul {
   padding: 0;
-  margin-top: 35px;
+  margin-top: 33px;
   margin-left: 30px;
 }
 li {
@@ -32,8 +32,7 @@ li:first-letter {
 }
 
 a {
-  text-decoration: none;
-  color: #142d4c;
+  color: #589aeb;
 }
 
 a:hover {
@@ -92,16 +91,16 @@ a:hover {
   top: -24px;
 }
 
+a {
+  text-decoration: underline;
+}
+
 #celsius {
   text-decoration: none;
 }
 
-#farenheit {
+#fahrenheit {
   text-decoration: none;
-}
-
-a {
-  text-decoration: underline;
 }
 
 .weather-icon {
@@ -139,4 +138,13 @@ a {
 }
 .temperatures {
   font-size: 13px;
+}
+
+.weather-temperature .active {
+  color: #142d4c;
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
 }
