@@ -80,20 +80,6 @@ function retrievePosition(position) {
 
 navigator.geolocation.getCurrentPosition(retrievePosition);
 
-// Background color depending on time of the day
-
-function changeBackground() {
-  let hour = time("#currentTime");
-  if (10 > hour < 18) {
-    document.style.body.background =
-      "linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)";
-  } else {
-    document.style.body.background = "black";
-  }
-}
-
-/// Background color function end
-
 function showFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature-value");
