@@ -38,7 +38,7 @@
               <div class="col-9">
                 <input
                   type="search"
-                  placeholder=" Type a city..."
+                  placeholder=" Type a city name..."
                   class="form-control"
                   id="city-input"
                   autofocus="on"
@@ -53,6 +53,12 @@
             Current weather in <span id="updated-city"></span>,
             <span id="updated-country"></span>
           </h1>
+          <li class="description">
+            Last updated: <span id="currentTime"></span>
+          </li>
+
+          <br />
+          <br />
 
           <div class="row">
             <div class="col-7">
@@ -64,7 +70,6 @@
                   <a href="#" id="fahrenheit">°F</a></span
                 >
               </div>
-              <li>Last updated: <span id="currentTime"></span></li>
             </div>
             <div class="col-5">
               <ul class="description">
@@ -83,103 +88,9 @@
           </div>
 
           <br />
+          <br />
 
-          <div class="container-fluid">
-            <div
-              class="scrolling-wrapper row flex-row flex-nowrap mt-1 pb-2 pt-1"
-            >
-              <div class="col-3">
-                <div class="card card-block day-1">
-                  <ul>
-                    <li>Fri</li>
-                    <li>⛅</li>
-                    <li>H:17° L:8°</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-3">
-                <div class="card card-block day-2">
-                  <ul class="forecast">
-                    <li>Sat</li>
-                    <li>⛅</li>
-                    <li>H:17° L:8°</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-3">
-                <div class="card card-block day-3">
-                  <ul>
-                    <li>Sun</li>
-                    <li>⛅</li>
-                    <li>H:17° L:8°</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-3">
-                <div class="card card-block day-4">
-                  <ul>
-                    <li>Mon</li>
-                    <li>⛅</li>
-                    <li>H:17° L:8°</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-3">
-                <div class="card card-block day-5">
-                  <ul>
-                    <li>Tue</li>
-                    <li>⛅</li>
-                    <li>H:17° L:8°</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-3">
-                <div class="card card-block day-6">
-                  <ul>
-                    <li>Wed</li>
-                    <li>⛅</li>
-                    <li>H:17° L:8°</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-3">
-                <div class="card card-block day-7">
-                  <ul>
-                    <li>Thu</li>
-                    <li>⛅</li>
-                    <li>H:17° L:8°</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-3">
-                <div class="card card-block day-8">
-                  <ul>
-                    <li>Fri</li>
-                    <li>⛅</li>
-                    <li>H:17° L:8°</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-3">
-                <div class="card card-block day-9">
-                  <ul>
-                    <li>Sat</li>
-                    <li>⛅</li>
-                    <li>H:17° L:8°</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-3">
-                <div class="card card-block day-10">
-                  <ul>
-                    <li>Sun</li>
-                    <li>⛅</li>
-                    <li>H:17° L:8°</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="weather-forecast" id="forecast"></div>
         </div>
 
         <small>

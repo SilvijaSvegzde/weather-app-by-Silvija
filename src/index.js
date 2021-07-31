@@ -22,6 +22,48 @@ function formatDate(timestamp) {
   return `${currentDay} ${hours}:${minutes}`;
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      let maxTemp = Math.round(forecastDay.temp.max);
+      let minTemp = Math.round(forecastDay.temp.min);
+      let forecastIcon = forecastDay.weather[0].icon;
+      forecastHTML =
+        forecastHTML +
+        `
+<div class="col-2">
+                <div class="weather-forecast-day">${formatDay(
+                  forecastDay.dt
+                )}</div>
+                <img src="http://openweathermap.org/img/wn/${forecastIcon}@2x.png" alt="" width="42"/>
+                <div class="weather-forecast-temperatures"> ${maxTemp}° ${minTemp}°</div>
+            </div>
+`;
+    }
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "46fd4cb2825699c13e293644a9027f76";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function showTemperature(response) {
   let temp = document.querySelector("#temperature-value");
   let cityName = document.querySelector("#updated-city");
@@ -50,6 +92,8 @@ function showTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 }
 
 function showWeather(city) {
@@ -109,78 +153,3 @@ let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", showCelsius);
 
 search(cityInput.value);
-
-var scrollDuration = 300;
-
-var leftPaddle = document.getElementsByClassName("left-paddle");
-var rightPaddle = document.getElementsByClassName("right-paddle");
-
-var itemsLength = $(".item").length;
-var itemSize = $(".item").outerWidth(true);
-// get some relevant size for the paddle triggering point
-var paddleMargin = 20;
-
-// get wrapper width
-var getMenuWrapperSize = function () {
-  return $(".menu-wrapper").outerWidth();
-};
-var menuWrapperSize = getMenuWrapperSize();
-// the wrapper is responsive
-$(window).on("resize", function () {
-  menuWrapperSize = getMenuWrapperSize();
-});
-// size of the visible part of the menu is equal as the wrapper size
-var menuVisibleSize = menuWrapperSize;
-
-// get total width of all menu items
-var getMenuSize = function () {
-  return itemsLength * itemSize;
-};
-var menuSize = getMenuSize();
-// get how much of menu is invisible
-var menuInvisibleSize = menuSize - menuWrapperSize;
-
-// get how much have we scrolled to the left
-var getMenuPosition = function () {
-  return $(".menu").scrollLeft();
-};
-
-// finally, what happens when we are actually scrolling the menu
-$(".menu").on("scroll", function () {
-  // get how much of menu is invisible
-  menuInvisibleSize = menuSize - menuWrapperSize;
-  // get how much have we scrolled so far
-  var menuPosition = getMenuPosition();
-
-  var menuEndOffset = menuInvisibleSize - paddleMargin;
-
-  // show & hide the paddles
-  // depending on scroll position
-  if (menuPosition <= paddleMargin) {
-    $(leftPaddle).addClass("hidden");
-    $(rightPaddle).removeClass("hidden");
-  } else if (menuPosition < menuEndOffset) {
-    // show both paddles in the middle
-    $(leftPaddle).removeClass("hidden");
-    $(rightPaddle).removeClass("hidden");
-  } else if (menuPosition >= menuEndOffset) {
-    $(leftPaddle).removeClass("hidden");
-    $(rightPaddle).addClass("hidden");
-  }
-
-  // print important values
-  $("#print-wrapper-size span").text(menuWrapperSize);
-  $("#print-menu-size span").text(menuSize);
-  $("#print-menu-invisible-size span").text(menuInvisibleSize);
-  $("#print-menu-position span").text(menuPosition);
-});
-
-// scroll to left
-$(rightPaddle).on("click", function () {
-  $(".menu").animate({ scrollLeft: menuInvisibleSize }, scrollDuration);
-});
-
-// scroll to right
-$(leftPaddle).on("click", function () {
-  $(".menu").animate({ scrollLeft: "0" }, scrollDuration);
-});
