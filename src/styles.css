@@ -14,10 +14,6 @@ h1 {
   margin: 0;
 }
 
-.card-block {
-  list-style-type: none;
-}
-
 li.description {
   list-style-type: none;
   font-size: 14px;
@@ -62,7 +58,7 @@ a:hover {
   border: 1px solid #142d4c;
   padding: 20px;
   padding-top: 0px;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-top: 50px;
 }
 
@@ -90,14 +86,6 @@ a:hover {
 .units {
   position: relative;
   top: -24px;
-}
-
-#celsius {
-  text-decoration: none;
-}
-
-#fahrenheit {
-  text-decoration: none;
 }
 
 .weather-temperature .active {

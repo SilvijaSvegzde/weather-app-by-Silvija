@@ -124,32 +124,7 @@ function retrievePosition(position) {
 
 navigator.geolocation.getCurrentPosition(retrievePosition);
 
-function showFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature-value");
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function showCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature-value");
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-let celsiusTemperature = null;
-
 let form = document.querySelector("#city-form");
 form.addEventListener("submit", search);
-
-let fahrenheitLink = document.querySelector("#fahrenheit");
-fahrenheitLink.addEventListener("click", showFahrenheit);
-
-let celsiusLink = document.querySelector("#celsius");
-celsiusLink.addEventListener("click", showCelsius);
 
 search(cityInput.value);
