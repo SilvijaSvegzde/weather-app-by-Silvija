@@ -33,64 +33,82 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
-          <form id="city-form">
+          <div class="sticky">
+            <form id="city-form">
+              <div class="row">
+                <div class="col-1">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-search"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                    />
+                  </svg>
+                </div>
+                <div class="col-10">
+                  <input
+                    type="search"
+                    placeholder=" Type a city name..."
+                    class="form-control"
+                    id="city-input"
+                    autofocus="on"
+                    autocomplete="off"
+                  />
+                </div>
+              </div>
+            </form>
+
+            <br />
+            <h1>
+              Current weather in <span id="updated-city"></span>,
+              <span id="updated-country"></span>
+            </h1>
+            <li class="description">
+              Last updated: <span id="currentTime"></span>
+            </li>
+
+            <br />
+            <br />
+
             <div class="row">
-              <div class="col-9">
-                <input
-                  type="search"
-                  placeholder=" Type a city name..."
-                  class="form-control"
-                  id="city-input"
-                  autofocus="on"
-                  autocomplete="off"
-                />
+              <div class="col-7">
+                <div class="clearfix weather-temperature">
+                  <img
+                    src=""
+                    alt=""
+                    class="weather-icon float-left"
+                    id="icon"
+                  />
+                  <span class="temperature" id="temperature-value"></span
+                  ><span class="units"> °C </span>
+                </div>
               </div>
-            </div>
-          </form>
-
-          <br />
-          <h1>
-            Current weather in <span id="updated-city"></span>,
-            <span id="updated-country"></span>
-          </h1>
-          <li class="description">
-            Last updated: <span id="currentTime"></span>
-          </li>
-
-          <br />
-          <br />
-
-          <div class="row">
-            <div class="col-7">
-              <div class="clearfix weather-temperature">
-                <img src="" alt="" class="weather-icon float-left" id="icon" />
-                <span class="temperature" id="temperature-value"></span
-                ><span class="units"> °C </span>
+              <div class="col-5">
+                <ul class="description">
+                  <li class="description" id="desc"></li>
+                  <li class="description">
+                    H:<span id="highest"></span>°C | L:<span id="lowest"></span
+                    >°C
+                  </li>
+                  <li class="description">
+                    Humidity: <span id="humidity"></span>%
+                  </li>
+                  <li class="description">
+                    Wind: <span id="wind-speed"></span> km/h
+                  </li>
+                </ul>
               </div>
-            </div>
-            <div class="col-5">
-              <ul class="description">
-                <li class="description" id="desc"></li>
-                <li class="description">
-                  H:<span id="highest"></span>°C | L:<span id="lowest"></span>°C
-                </li>
-                <li class="description">
-                  Humidity: <span id="humidity"></span>%
-                </li>
-                <li class="description">
-                  Wind: <span id="wind-speed"></span> km/h
-                </li>
-              </ul>
             </div>
           </div>
-
           <br />
           <br />
 
-          <div
-            class="weather-forecast container-fluid scrolling-wrapper"
-            id="forecast"
-          ></div>
+          <div class="weather-forecast container-fluid" id="forecast"></div>
           <br />
         </div>
 

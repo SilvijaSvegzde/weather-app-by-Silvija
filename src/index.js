@@ -25,7 +25,15 @@ function formatDate(timestamp) {
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
   return days[day];
 }
 
@@ -33,22 +41,24 @@ function displayForecast(response) {
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
-  let forecastHTML = `<div class="row scrolling-wrapper flex-row flex-nowrap mt-1 pb-2 pt-1">`;
+  let forecastHTML = `<div class="col scrolling-wrapper flex-col flex-nowrap mt-1 pb-2 pt-1">`;
 
-  forecast.forEach(function (forecastDay, index) {
+  forecast.forEach(function (forecastDay) {
     let maxTemp = Math.round(forecastDay.temp.max);
     let minTemp = Math.round(forecastDay.temp.min);
     let forecastIcon = forecastDay.weather[0].icon;
     forecastHTML =
       forecastHTML +
       `
-<div class="col-2 card card-block ">
-                <div class="weather-forecast-day">${formatDay(
+
+<div class="row card card-block ">
+                <div class="col-6 weather-forecast-day">${formatDay(
                   forecastDay.dt
                 )}</div>
-                <div><img src="http://openweathermap.org/img/wn/${forecastIcon}@2x.png" alt="" width="42"/></div>
-                <div class="weather-forecast-temperatures"> ${maxTemp}° ${minTemp}°</div>
+                <div class="col-5" id="forecast-icon"><img src="http://openweathermap.org/img/wn/${forecastIcon}@2x.png" alt="" width="42" /></div>
+                <div class="col-3 weather-forecast-temperatures"> ${maxTemp}° ${minTemp}°</div>
             </div>
+                
 `;
   });
 

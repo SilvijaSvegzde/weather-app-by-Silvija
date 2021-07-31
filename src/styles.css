@@ -36,16 +36,17 @@ a:hover {
 }
 
 #city-input {
-  font-size: 14px;
+  font-size: 16px;
   color: #142d4c;
-  line-height: 1.3;
-  background-color: white;
+  line-height: 1;
+  background-color: whitesmoke;
   border: none;
   border-radius: 20px;
   background-repeat: no-repeat;
   background-position: 95% 80%;
   width: 100%;
   padding: 10px;
+  margin-left: -15px;
   cursor: auto;
 }
 
@@ -55,7 +56,7 @@ a:hover {
 }
 
 .weather-app {
-  border: 1px solid #142d4c;
+  border: 2px solid #142d4c;
   padding: 20px;
   padding-top: 0px;
   border-radius: 10px;
@@ -88,32 +89,41 @@ a:hover {
   top: -24px;
 }
 
+#forecast-icon {
+  position: relative;
+  margin-top: -10px;
+}
+
 .scrolling-wrapper {
-  overflow-x: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 180px;
+  max-width: 100%;
 }
 
 .card-block {
-  height: 100px;
-  width: 100px;
-  margin: 5px;
-  padding: 5px;
+  height: 15px;
+  max-width: 90%;
+  width: 450px;
+  padding-right: 5px;
   background-color: transparent;
   border: none;
   transition: all 0.2s ease-in-out;
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 10px;
   height: 10px;
-  padding: 5px;
-}
-
-::-webkit-scrollbar-track {
-  border-radius: 10px;
-  background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border: 2px solid #142d4c;
   border-radius: 10px;
-  background-color: whitesmoke;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
 }
