@@ -57,8 +57,9 @@ a:hover {
 
 .weather-app-wrapper {
   max-width: 600px;
-  margin: 20px auto;
+  margin: auto;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .weather-app {
