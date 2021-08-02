@@ -33,10 +33,6 @@ a:hover {
   color: #142d4c;
 }
 
-strong {
-  font-size: 16px;
-}
-
 #city-input {
   font-size: 16px;
   color: #142d4c;
@@ -69,9 +65,13 @@ strong {
   margin-top: 40px;
 }
 
+.weather-temperature {
+  text-align: center;
+}
+
 .temperature {
   position: relative;
-  top: 10px;
+  top: 20px;
   font-size: 64px;
   font-weight: 100;
   line-height: 1;
@@ -88,12 +88,8 @@ strong {
 
 .units {
   position: relative;
-  top: -22px;
+  top: -10px;
   font-size: 20px;
-}
-
-.clearfix {
-  padding-left: 180px;
 }
 
 .scrolling-wrapper {
