@@ -13,6 +13,7 @@ h1 {
   line-height: 28px;
   margin: 0;
   text-align: center;
+  padding-bottom: 5px;
 }
 
 h6 {
@@ -102,7 +103,6 @@ a:hover {
 .card-block {
   height: 10px;
   max-width: 90%;
-  width: 450px;
   background-color: transparent;
   border: none;
   transition: all 0.2s ease-in-out;
