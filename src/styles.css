@@ -100,33 +100,34 @@ a:hover {
 }
 
 .scrolling-wrapper {
-  overflow-y: auto;
-  overflow-x: hidden;
-  height: 145px;
-  max-width: 100%;
+  overflow-x: auto;
 }
 
 .card-block {
-  height: 7px;
-  max-width: 90%;
+  height: 100px;
+  width: 100px;
+  margin: 5px;
+  padding: 5px;
   background-color: transparent;
   border: none;
   transition: all 0.2s ease-in-out;
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  height: 10px;
   border: 1px solid lightgrey;
+  border-radius: 10px;
   background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: lightgrey;
+  background: linear-gradient(
+    111.4deg,
+    rgb(209, 231, 235) 7.4%,
+    rgb(238, 219, 199) 51.4%,
+    rgb(255, 159, 122) 82.6%,
+    rgb(255, 109, 58) 100.2%
+  );
   border: none;
   border-radius: 10px;
-}
-
-#forecast-icon {
-  position: relative;
-  margin-top: -10px;
 }
