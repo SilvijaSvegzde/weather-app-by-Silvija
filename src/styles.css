@@ -57,12 +57,12 @@ a:hover {
 
 .weather-app-wrapper {
   max-width: 600px;
-  margin: 30px auto;
+  margin: 20px auto;
 }
 
 .weather-app {
   border: 1px solid #142d4c;
-  padding: 20px;
+  padding: 10px;
   padding-top: 30px;
   border-radius: 10px;
   margin-top: 50px;
@@ -104,6 +104,7 @@ a:hover {
 }
 
 .card-block {
+  text-align: center;
   height: 100px;
   width: 100px;
   margin: 5px;
@@ -118,6 +119,7 @@ a:hover {
   border: 1px solid lightgrey;
   border-radius: 10px;
   background-color: transparent;
+  padding: 0px;
 }
 
 ::-webkit-scrollbar-thumb {
