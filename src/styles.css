@@ -12,17 +12,15 @@ h1 {
   font-weight: 100;
   line-height: 28px;
   margin: 0;
+  text-align: center;
 }
 
-li.description {
-  list-style-type: none;
-  font-size: 15px;
-  font-weight: 100;
-  line-height: 1.3;
-  text-align: left;
+h6 {
+  text-align: center;
+  line-height: 0.8;
 }
 
-li:first-letter {
+h6::first-letter {
   text-transform: capitalize;
 }
 
@@ -33,6 +31,10 @@ a {
 
 a:hover {
   color: #142d4c;
+}
+
+strong {
+  font-size: 16px;
 }
 
 #city-input {
@@ -56,9 +58,9 @@ a:hover {
 }
 
 .weather-app {
-  border: 2px solid #142d4c;
+  border: 1px solid #142d4c;
   padding: 20px;
-  padding-top: 0px;
+  padding-top: 30px;
   border-radius: 10px;
   margin-top: 50px;
 }
@@ -90,20 +92,19 @@ a:hover {
   font-size: 20px;
 }
 
-#forecast-icon {
-  position: relative;
-  margin-top: -10px;
+.clearfix {
+  padding-left: 180px;
 }
 
 .scrolling-wrapper {
   overflow-y: auto;
   overflow-x: hidden;
-  height: 180px;
+  height: 160px;
   max-width: 100%;
 }
 
 .card-block {
-  height: 15px;
+  height: 10px;
   max-width: 90%;
   width: 450px;
   background-color: transparent;
@@ -113,11 +114,17 @@ a:hover {
 
 ::-webkit-scrollbar {
   width: 10px;
-  height: 10px;
+  border: 1px solid lightgrey;
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: transparent;
-  border: 2px solid #142d4c;
+  background-color: lightgrey;
+  border: none;
   border-radius: 10px;
+}
+
+#forecast-icon {
+  position: relative;
+  margin-top: -10px;
 }

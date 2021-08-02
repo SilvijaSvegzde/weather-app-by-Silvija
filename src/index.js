@@ -56,7 +56,7 @@ function displayForecast(response) {
                   forecastDay.dt
                 )}</div>
                 <div class="col-4" id="forecast-icon"><img src="http://openweathermap.org/img/wn/${forecastIcon}@2x.png" alt="" width="42" /></div>
-                <div class="col-3 weather-forecast-temperatures"> ${maxTemp}° ${minTemp}°</div>
+                <div class="col-3 weather-forecast-temperatures"> <strong>${maxTemp}°</strong> ${minTemp}°</div>
             </div>
                 
 `;
