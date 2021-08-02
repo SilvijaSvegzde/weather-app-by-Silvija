@@ -52,7 +52,7 @@ function displayForecast(response) {
       `
 
 <div class="row card card-block ">
-                <div class="col-5 weather-forecast-day">${formatDay(
+                <div class="col-4 weather-forecast-day">${formatDay(
                   forecastDay.dt
                 )}</div>
                 <div class="col-4" id="forecast-icon"><img src="http://openweathermap.org/img/wn/${forecastIcon}@2x.png" alt="" width="42" /></div>

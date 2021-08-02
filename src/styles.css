@@ -1,6 +1,12 @@
 body {
   font-family: "PT Sans", sans-serif;
-  background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  background: linear-gradient(
+    111.4deg,
+    rgb(209, 231, 235) 7.4%,
+    rgb(238, 219, 199) 51.4%,
+    rgb(255, 159, 122) 82.6%,
+    rgb(255, 109, 58) 100.2%
+  );
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -96,12 +102,12 @@ a:hover {
 .scrolling-wrapper {
   overflow-y: auto;
   overflow-x: hidden;
-  height: 160px;
+  height: 145px;
   max-width: 100%;
 }
 
 .card-block {
-  height: 10px;
+  height: 7px;
   max-width: 90%;
   background-color: transparent;
   border: none;
