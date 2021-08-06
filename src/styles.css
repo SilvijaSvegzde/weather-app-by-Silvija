@@ -66,13 +66,12 @@ a:hover {
   background-color: whitesmoke;
   border: none;
   border-radius: 20px;
-  background-repeat: no-repeat;
-  background-position: 95% 80%;
   width: 100%;
   padding: 10px;
   padding-left: 15px;
   cursor: auto;
   outline: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .weather-app-wrapper {
@@ -83,7 +82,6 @@ a:hover {
 }
 
 .weather-app {
-  border: 1px solid transparent;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   padding: 10px;
   padding-top: 20px;
