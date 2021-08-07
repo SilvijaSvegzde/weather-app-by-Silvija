@@ -51,7 +51,7 @@ function displayForecast(response) {
       forecastHTML +
       `
 
-<div class="col-2 card card-block ">
+<div class="col-sm-2 card card-block ">
                 <div class="weather-forecast-day">${formatDay(
                   forecastDay.dt
                 )}</div>
